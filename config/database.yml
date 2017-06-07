@@ -1,0 +1,53 @@
+# MySQL version
+development:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: lyln_development
+  pool: 5
+  username: root
+  password: password
+  host: localhost
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: lyln_test
+  pool: 5
+  username: root
+  password: password
+  host: localhost
+
+production:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: lyln_production
+  pool: 5
+  username: licenseapl
+  password: <%= ENV['LICENSE_DATABASE_PASSWORD'] %>
+  host: localhost
+
+staging:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: lyln_production
+  pool: 5
+  username: licenseapl
+  password: <%= ENV['LICENSE_DATABASE_PASSWORD'] %>
+  host: localhost
+
+jenkins:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: lyln_jenkins
+  pool: 5
+  username: root
+  password:
+  host: localhost

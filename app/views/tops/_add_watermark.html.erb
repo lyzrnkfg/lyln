@@ -1,0 +1,19 @@
+<img class="sample2" data-img2blob="../assets/2.jpg" />
+
+<script>
+    $(function() {
+
+        // with watermark
+        var height = $(".sample2").height() - 20
+        $(".sample2").img2blob({
+            watermark: '@liy',
+            fontStyle: 'Microsoft YaHei,Arial',
+            fontSize: '20', // px
+            fontColor: '#FFFFFF', // default 'black'
+            fontX: 50, // The x coordinate where to start painting the text
+            fontY: 280 // The y coordinate where to start painting the text
+        });
+
+
+    });
+</script>
